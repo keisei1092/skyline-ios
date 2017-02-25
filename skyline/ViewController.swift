@@ -16,8 +16,9 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		setNeedsStatusBarAppearanceUpdate();
+		setNeedsStatusBarAppearanceUpdate()
 		registerForKeyboardNotifications()
+		navigationController?.isToolbarHidden = false
 	}
 
 	override func viewWillAppear(_ animated: Bool) {

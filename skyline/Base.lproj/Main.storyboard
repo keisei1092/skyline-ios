@@ -58,20 +58,35 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gvO-ao-2Nw"/>
                                 </connections>
                             </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-4p-8Fd">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9i7-1B-FSO"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="70v-oV-J1j"/>
+                                    <barButtonItem title="count" style="plain" id="swy-QG-Hlt">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rJS-im-yae" secondAttribute="bottom" id="4eF-7c-1gc"/>
                             <constraint firstItem="9zV-ZX-Gvz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="KLq-Zz-SNj"/>
                             <constraint firstAttribute="trailing" secondItem="rJS-im-yae" secondAttribute="trailing" id="MwX-V6-DKq"/>
+                            <constraint firstItem="u6X-4p-8Fd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VbP-4s-ogB"/>
                             <constraint firstItem="9zV-ZX-Gvz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="WQh-ji-KAZ"/>
                             <constraint firstItem="ZIZ-DH-zlJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Y3o-RW-e64"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u6X-4p-8Fd" secondAttribute="bottom" id="YQf-Oj-Cv4"/>
                             <constraint firstItem="ZIZ-DH-zlJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="bXw-XJ-uQr"/>
+                            <constraint firstAttribute="trailing" secondItem="u6X-4p-8Fd" secondAttribute="trailing" id="iv4-db-rhT"/>
                             <constraint firstItem="rJS-im-yae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j8Q-IR-3St"/>
                             <constraint firstItem="rJS-im-yae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sIt-Nb-bAT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Note" selectedImage="paper-piece-7" id="toc-sf-WRa"/>
+                    <tabBarItem key="tabBarItem" title="Note" image="paper-piece-7" selectedImage="paper-piece-7" id="toc-sf-WRa"/>
                     <connections>
                         <outlet property="scrollView" destination="rJS-im-yae" id="1qn-Os-9ZT"/>
                         <outlet property="textView" destination="ZIZ-DH-zlJ" id="wDG-iN-suG"/>
@@ -124,7 +139,7 @@
         <scene sceneID="Vrb-BX-RBc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hak-B1-sti" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="spanner-7" id="4Ox-CQ-IJ8"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="spanner-7" selectedImage="spanner-7" id="4Ox-CQ-IJ8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2gG-eJ-NdI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
