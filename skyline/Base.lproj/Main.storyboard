@@ -66,7 +66,7 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="70v-oV-J1j"/>
                                     <barButtonItem title="count" style="plain" id="swy-QG-Hlt">
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
