@@ -79,20 +79,12 @@ class ViewController: UIViewController {
 		scrollView.contentOffset.y = 0
 	}
 
-	func dismissKeyboard() {
-		view.endEditing(true)
-	}
-
 	private func refreshTextAttributes() {
 		textView.font = TextAttributesManager.shared.font
 	}
 
-}
-
-extension ViewController: UIScrollViewDelegate {
-
-	func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-		textView.resignFirstResponder()
+	func dismissKeyboard() {
+		view.endEditing(true)
 	}
 
 }
