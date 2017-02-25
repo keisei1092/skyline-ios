@@ -14,12 +14,19 @@ class SecondTableViewController: UITableViewController {
 		case face = 0, size
 	}
 
-	let config: [String: [String]] = [
-		"face": UIFont.familyNames.sorted(),
+	var config: [String: [String]] = [
+		"face": [],
 		"size": [
+			"10",
+			"11",
+			"12",
+			"13",
+			"14",
 			"16",
 			"20",
-			"24"
+			"24",
+			"32",
+			"64"
 		]
 	]
 
@@ -37,6 +44,12 @@ class SecondTableViewController: UITableViewController {
 		tableView.tableFooterView = tableFooterView
 
 		navigationController?.navigationBar.barStyle = .blackTranslucent
+
+		UIFont.familyNames.sorted().forEach({ familyName in
+			UIFont.fontNames(forFamilyName: familyName).forEach({ fontName in
+				config["face"]?.append(fontName)
+			})
+		})
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,7 +81,7 @@ class SecondTableViewController: UITableViewController {
 		case Sections.face.rawValue:
 			let name = config["face"]?[indexPath.row] ?? ""
 			let font = cell.textLabel?.font
-			cell.textLabel?.text = name
+			cell.textLabel?.text = "\(name) あア亜"
 			cell.textLabel?.font = UIFont(name: name, size: font!.pointSize)
 		case Sections.size.rawValue:
 			cell.textLabel?.text = config["size"]?[indexPath.row] ?? ""
