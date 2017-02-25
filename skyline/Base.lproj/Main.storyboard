@@ -54,6 +54,9 @@
                                     <constraint firstItem="9zV-ZX-Gvz" firstAttribute="leading" secondItem="rJS-im-yae" secondAttribute="leading" id="gTh-tM-OOJ"/>
                                     <constraint firstAttribute="bottom" secondItem="9zV-ZX-Gvz" secondAttribute="bottom" id="hMz-Ua-mXq"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gvO-ao-2Nw"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>

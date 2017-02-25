@@ -38,3 +38,11 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UIScrollViewDelegate {
+
+	func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+		textView.resignFirstResponder()
+	}
+
+}
+
