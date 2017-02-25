@@ -11,15 +11,12 @@ import UIKit
 class SecondTableViewController: UITableViewController {
 
 	enum Sections: Int {
-		case fontFace = 0, fontSize
+		case face = 0, size
 	}
 
 	let config: [String: [String]] = [
-		"fontFace": [
-			"Helvetica",
-			"Times"
-		],
-		"fontSize": [
+		"face": UIFont.familyNames.sorted(),
+		"size": [
 			"16",
 			"20",
 			"24"
@@ -55,10 +52,10 @@ class SecondTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		switch section {
-		case Sections.fontFace.rawValue:
-			return config["fontFace"]?.count ?? 0
-		case Sections.fontSize.rawValue:
-			return config["fontSize"]?.count ?? 0
+		case Sections.face.rawValue:
+			return config["face"]?.count ?? 0
+		case Sections.size.rawValue:
+			return config["size"]?.count ?? 0
 		default:
 			return 0
 		}
@@ -68,10 +65,13 @@ class SecondTableViewController: UITableViewController {
 		let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
 
 		switch indexPath.section {
-		case Sections.fontFace.rawValue:
-			cell.textLabel?.text = config["fontFace"]?[indexPath.row] ?? ""
-		case Sections.fontSize.rawValue:
-			cell.textLabel?.text = config["fontSize"]?[indexPath.row] ?? ""
+		case Sections.face.rawValue:
+			let name = config["face"]?[indexPath.row] ?? ""
+			let font = cell.textLabel?.font
+			cell.textLabel?.text = name
+			cell.textLabel?.font = UIFont(name: name, size: font!.pointSize)
+		case Sections.size.rawValue:
+			cell.textLabel?.text = config["size"]?[indexPath.row] ?? ""
 		default:
 			break
 		}
@@ -81,10 +81,10 @@ class SecondTableViewController: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		switch section {
-		case Sections.fontFace.rawValue:
-			return "fontFace"
-		case Sections.fontSize.rawValue:
-			return "fontSize"
+		case Sections.face.rawValue:
+			return "face"
+		case Sections.size.rawValue:
+			return "size"
 		default:
 			break
 		}
@@ -93,10 +93,10 @@ class SecondTableViewController: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		switch indexPath.section {
-		case Sections.fontFace.rawValue:
-			TextAttributesManager.shared.fontFace = config["fontFace"]?[indexPath.row] ?? ""
-		case Sections.fontSize.rawValue:
-			TextAttributesManager.shared.fontSize = CGFloat((config["fontSize"]![indexPath.row] as NSString).doubleValue)
+		case Sections.face.rawValue:
+			TextAttributesManager.shared.face = config["face"]?[indexPath.row] ?? ""
+		case Sections.size.rawValue:
+			TextAttributesManager.shared.size = CGFloat((config["size"]![indexPath.row] as NSString).doubleValue)
 		default:
 			break
 		}

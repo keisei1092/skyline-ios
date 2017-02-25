@@ -12,8 +12,12 @@ class TextAttributesManager {
 
 	static let shared = TextAttributesManager()
 
-	var fontFace = ""
-	var fontSize: CGFloat = 0
+	var face = "Helvetica"
+	var size: CGFloat = 20
+
+	var font: UIFont {
+		return UIFont(name: face, size: size)!
+	}
 
 	private init() {
 

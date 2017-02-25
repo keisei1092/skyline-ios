@@ -67,26 +67,7 @@ class ViewController: UIViewController {
 	}
 
 	private func refreshTextAttributes() {
-		refreshFontFace()
-		refreshFontSize()
-	}
-
-	private func refreshFontSize() {
-		let fontSize = TextAttributesManager.shared.fontSize
-
-		guard fontSize != 0 else {
-			return
-		}
-
-		textView.font = textView.font?.withSize(fontSize)
-	}
-
-	private func refreshFontFace() {
-		let fontFace = TextAttributesManager.shared.fontFace
-
-		guard fontFace != "" else  {
-			return
-		}
+		textView.font = TextAttributesManager.shared.font
 	}
 
 }
