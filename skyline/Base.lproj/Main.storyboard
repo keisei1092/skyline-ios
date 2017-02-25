@@ -88,6 +88,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Note" image="paper-piece-7" selectedImage="paper-piece-7" id="toc-sf-WRa"/>
                     <connections>
+                        <outlet property="charsBarButtonItem" destination="swy-QG-Hlt" id="Iih-3S-zHf"/>
                         <outlet property="scrollView" destination="rJS-im-yae" id="1qn-Os-9ZT"/>
                         <outlet property="textView" destination="ZIZ-DH-zlJ" id="wDG-iN-suG"/>
                     </connections>

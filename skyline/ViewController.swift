@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var textView: UITextView!
+	@IBOutlet weak var charsBarButtonItem: UIBarButtonItem!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -77,6 +78,14 @@ extension ViewController: UIScrollViewDelegate {
 
 	func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 		textView.resignFirstResponder()
+	}
+
+}
+
+extension ViewController: UITextViewDelegate {
+
+	func textViewDidChange(_ textView: UITextView) {
+		charsBarButtonItem.title = String(textView.text.characters.count)
 	}
 
 }
