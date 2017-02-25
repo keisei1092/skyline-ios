@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 		setNeedsStatusBarAppearanceUpdate()
 		registerForKeyboardNotifications()
+		setDoneOnKeyboard()
 		navigationController?.isToolbarHidden = false
 	}
 
@@ -50,6 +51,16 @@ class ViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillBeHidden), name: .UIKeyboardWillHide, object: nil)
 	}
 
+	func setDoneOnKeyboard() {
+		let keyboardToolbar = UIToolbar()
+		keyboardToolbar.sizeToFit()
+		keyboardToolbar.barStyle = .blackTranslucent
+		let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+		let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ViewController.dismissKeyboard))
+		keyboardToolbar.items = [flexBarButton, charsBarButtonItem, doneBarButton]
+		textView.inputAccessoryView = keyboardToolbar
+	}
+
 	func keyboardWillShown(notification: Notification) {
 		guard let info = notification.userInfo else {
 			print("No notification info for keyboard")
@@ -66,6 +77,10 @@ class ViewController: UIViewController {
 
 	func keyboardWillBeHidden(notification: Notification) {
 		scrollView.contentOffset.y = 0
+	}
+
+	func dismissKeyboard() {
+		view.endEditing(true)
 	}
 
 	private func refreshTextAttributes() {

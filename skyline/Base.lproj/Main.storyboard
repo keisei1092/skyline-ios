@@ -58,30 +58,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gvO-ao-2Nw"/>
                                 </connections>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-4p-8Fd">
-                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="9i7-1B-FSO"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="70v-oV-J1j"/>
-                                    <barButtonItem title="count" style="plain" id="swy-QG-Hlt">
-                                        <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rJS-im-yae" secondAttribute="bottom" id="4eF-7c-1gc"/>
                             <constraint firstItem="9zV-ZX-Gvz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="KLq-Zz-SNj"/>
                             <constraint firstAttribute="trailing" secondItem="rJS-im-yae" secondAttribute="trailing" id="MwX-V6-DKq"/>
-                            <constraint firstItem="u6X-4p-8Fd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VbP-4s-ogB"/>
                             <constraint firstItem="9zV-ZX-Gvz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="WQh-ji-KAZ"/>
                             <constraint firstItem="ZIZ-DH-zlJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Y3o-RW-e64"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u6X-4p-8Fd" secondAttribute="bottom" id="YQf-Oj-Cv4"/>
                             <constraint firstItem="ZIZ-DH-zlJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="bXw-XJ-uQr"/>
-                            <constraint firstAttribute="trailing" secondItem="u6X-4p-8Fd" secondAttribute="trailing" id="iv4-db-rhT"/>
                             <constraint firstItem="rJS-im-yae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j8Q-IR-3St"/>
                             <constraint firstItem="rJS-im-yae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sIt-Nb-bAT"/>
                         </constraints>
@@ -94,6 +79,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <barButtonItem title="count" style="plain" id="swy-QG-Hlt">
+                    <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1230" y="-368"/>
         </scene>
