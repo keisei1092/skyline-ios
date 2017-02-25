@@ -20,6 +20,11 @@ class ViewController: UIViewController {
 		registerForKeyboardNotifications()
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		refreshTextAttributes()
+	}
+
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		UIApplication.shared.statusBarStyle = .default
@@ -59,6 +64,29 @@ class ViewController: UIViewController {
 
 	func keyboardWillBeHidden(notification: Notification) {
 		scrollView.contentOffset.y = 0
+	}
+
+	private func refreshTextAttributes() {
+		refreshFontFace()
+		refreshFontSize()
+	}
+
+	private func refreshFontSize() {
+		let fontSize = TextAttributesManager.shared.fontSize
+
+		guard fontSize != 0 else {
+			return
+		}
+
+		textView.font = textView.font?.withSize(fontSize)
+	}
+
+	private func refreshFontFace() {
+		let fontFace = TextAttributesManager.shared.fontFace
+
+		guard fontFace != "" else  {
+			return
+		}
 	}
 
 }

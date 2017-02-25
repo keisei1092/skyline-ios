@@ -12,12 +12,11 @@ class TextAttributesManager {
 
 	static let shared = TextAttributesManager()
 
-	var hoge = "" // example :]
+	var fontFace = ""
+	var fontSize: CGFloat = 0
 
 	private init() {
 
 	}
-
-	// do something!
 
 }

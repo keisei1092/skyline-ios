@@ -91,6 +91,17 @@ class SecondTableViewController: UITableViewController {
 		return nil
 	}
 
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		switch indexPath.section {
+		case Sections.fontFace.rawValue:
+			TextAttributesManager.shared.fontFace = config["fontFace"]?[indexPath.row] ?? ""
+		case Sections.fontSize.rawValue:
+			TextAttributesManager.shared.fontSize = CGFloat((config["fontSize"]![indexPath.row] as NSString).doubleValue)
+		default:
+			break
+		}
+	}
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
