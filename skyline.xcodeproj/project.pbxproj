@@ -15,6 +15,7 @@
 		F376B7331E616D8300FAA8EE /* skylineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376B7321E616D8300FAA8EE /* skylineTests.swift */; };
 		F376B73E1E616D8300FAA8EE /* skylineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376B73D1E616D8300FAA8EE /* skylineUITests.swift */; };
 		F376B74C1E617B6A00FAA8EE /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376B74B1E617B6A00FAA8EE /* SecondTableViewController.swift */; };
+		F376B74E1E617C4300FAA8EE /* TextAttributesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376B74D1E617C4300FAA8EE /* TextAttributesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F376B73D1E616D8300FAA8EE /* skylineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skylineUITests.swift; sourceTree = "<group>"; };
 		F376B73F1E616D8300FAA8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F376B74B1E617B6A00FAA8EE /* SecondTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		F376B74D1E617C4300FAA8EE /* TextAttributesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttributesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				F376B71D1E616D8300FAA8EE /* AppDelegate.swift */,
 				F376B71F1E616D8300FAA8EE /* ViewController.swift */,
 				F376B74B1E617B6A00FAA8EE /* SecondTableViewController.swift */,
+				F376B74D1E617C4300FAA8EE /* TextAttributesManager.swift */,
 				F376B7211E616D8300FAA8EE /* Main.storyboard */,
 				F376B7241E616D8300FAA8EE /* Assets.xcassets */,
 				F376B7261E616D8300FAA8EE /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F376B7201E616D8300FAA8EE /* ViewController.swift in Sources */,
+				F376B74E1E617C4300FAA8EE /* TextAttributesManager.swift in Sources */,
 				F376B74C1E617B6A00FAA8EE /* SecondTableViewController.swift in Sources */,
 				F376B71E1E616D8300FAA8EE /* AppDelegate.swift in Sources */,
 			);
