@@ -10,6 +10,22 @@ import UIKit
 
 class SecondTableViewController: UITableViewController {
 
+	enum Sections: Int {
+		case fontFace = 0, fontSize
+	}
+
+	let config: [String: [String]] = [
+		"fontFace": [
+			"Helvetica",
+			"Times"
+		],
+		"fontSize": [
+			"16",
+			"20",
+			"24"
+		]
+	]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +34,10 @@ class SecondTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
+		view.backgroundColor = .groupTableViewBackground
+		let tableFooterView = UIView(frame: CGRect.zero)
+		tableView.tableFooterView = tableFooterView
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +48,46 @@ class SecondTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return config.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+		switch section {
+		case Sections.fontFace.rawValue:
+			return config["fontFace"]?.count ?? 0
+		case Sections.fontSize.rawValue:
+			return config["fontSize"]?.count ?? 0
+		default:
+			return 0
+		}
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+		let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
 
-        // Configure the cell...
+		switch indexPath.section {
+		case Sections.fontFace.rawValue:
+			cell.textLabel?.text = config["fontFace"]?[indexPath.row] ?? ""
+		case Sections.fontSize.rawValue:
+			cell.textLabel?.text = config["fontSize"]?[indexPath.row] ?? ""
+		default:
+			break
+		}
 
         return cell
     }
-    */
+
+	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		switch section {
+		case Sections.fontFace.rawValue:
+			return "fontFace"
+		case Sections.fontSize.rawValue:
+			return "fontSize"
+		default:
+			break
+		}
+		return nil
+	}
 
     /*
     // Override to support conditional editing of the table view.
