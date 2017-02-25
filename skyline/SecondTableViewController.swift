@@ -83,8 +83,19 @@ class SecondTableViewController: UITableViewController {
 			let font = cell.textLabel?.font
 			cell.textLabel?.text = "\(name) あア亜"
 			cell.textLabel?.font = UIFont(name: name, size: font!.pointSize)
+
+			if name == TextAttributesManager.shared.face {
+				cell.textLabel?.textColor = view.tintColor
+				cell.accessoryType = .checkmark
+			}
 		case Sections.size.rawValue:
-			cell.textLabel?.text = config["size"]?[indexPath.row] ?? ""
+			let size = config["size"]?[indexPath.row] ?? ""
+			cell.textLabel?.text = size
+
+			if String(describing: TextAttributesManager.shared.size).range(of: size) != nil {
+				cell.textLabel?.textColor = view.tintColor
+				cell.accessoryType = .checkmark
+			}
 		default:
 			break
 		}
@@ -108,8 +119,10 @@ class SecondTableViewController: UITableViewController {
 		switch indexPath.section {
 		case Sections.face.rawValue:
 			TextAttributesManager.shared.face = config["face"]?[indexPath.row] ?? ""
+			tableView.reloadSections([indexPath.section], with: .none)
 		case Sections.size.rawValue:
 			TextAttributesManager.shared.size = CGFloat((config["size"]![indexPath.row] as NSString).doubleValue)
+			tableView.reloadSections([indexPath.section], with: .none)
 		default:
 			break
 		}
