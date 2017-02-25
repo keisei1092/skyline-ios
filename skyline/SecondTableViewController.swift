@@ -26,6 +26,7 @@ class SecondTableViewController: UITableViewController {
 			"20",
 			"24",
 			"32",
+			"48",
 			"64"
 		]
 	]
