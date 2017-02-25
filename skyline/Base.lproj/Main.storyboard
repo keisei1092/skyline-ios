@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Note-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="skyline" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <constraint firstItem="rJS-im-yae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sIt-Nb-bAT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="toc-sf-WRa"/>
+                    <tabBarItem key="tabBarItem" title="Note" selectedImage="paper-piece-7" id="toc-sf-WRa"/>
                     <connections>
                         <outlet property="scrollView" destination="rJS-im-yae" id="1qn-Os-9ZT"/>
                         <outlet property="textView" destination="ZIZ-DH-zlJ" id="wDG-iN-suG"/>
@@ -116,8 +116,10 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bTk-e4-fo0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="KXj-YJ-VzU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="PhA-qm-Ioq"/>
@@ -128,11 +130,11 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="-3.1484257871064472"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="Vrb-BX-RBc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hak-B1-sti" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4Ox-CQ-IJ8"/>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="spanner-7" id="4Ox-CQ-IJ8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2gG-eJ-NdI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -148,4 +150,8 @@
             <point key="canvasLocation" x="1229.5999999999999" y="361.16941529235385"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper-piece-7" width="30" height="30"/>
+        <image name="spanner-7" width="30" height="30"/>
+    </resources>
 </document>
